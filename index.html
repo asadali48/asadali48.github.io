@@ -1,85 +1,742 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Asad Ali | MySQL Database Administrator</title>
+  <title>Asad Ali | Remote Database Consultant & Administrator</title>
+  <!-- 📍 BROWSER TAB LOGO (FAVICON) -->
+  <link rel="icon" type="image/png" href="website-logo.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #0f172a; color: #e2e8f0; }
-    header { padding: 40px; text-align: center; background: #020617; }
-    h1 { margin: 0; font-size: 36px; }
-    p { color: #94a3b8; }
-    section { padding: 40px; max-width: 1000px; margin: auto; }
-    .card { background: #020617; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
-    .skills span { display: inline-block; background: #1e293b; padding: 8px 12px; margin: 5px; border-radius: 5px; }
-    a { color: #38bdf8; text-decoration: none; }
-    footer { text-align: center; padding: 20px; background: #020617; }
-    button { padding: 10px 20px; border: none; border-radius: 5px; background: #38bdf8; color: black; cursor: pointer; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F8FAFC;
+      color: #0F172A;
+      overflow-x: hidden;
+    }
+
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Custom Light Theme Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F1F5F9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #94A3B8;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #64748B;
+    }
+
+    /* Gold Button Effect */
+    .gold-pill-btn {
+      background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+      color: #FFFFFF;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 14px rgba(217, 119, 6, 0.25);
+    }
+    .gold-pill-btn:hover {
+      background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
+      box-shadow: 0 6px 20px rgba(217, 119, 6, 0.4);
+      transform: translateY(-2px);
+    }
+
+    /* Subtle Card Shadow Glows */
+    .card-hover-shadow {
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+    }
+    .card-hover-shadow:hover {
+      box-shadow: 0 12px 30px -4px rgba(14, 165, 233, 0.15);
+      transform: translateY(-2px);
+    }
   </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900 antialiased">
 
-<header>
-  <h1>Asad Ali</h1>
-  <p>MySQL Database Administrator | Performance Tuning | Replication | HA/DR</p>
-</header>
+  <!-- FIXED TOP NAVIGATION BAR -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo / Branding -->
+        <a href="#home" class="flex items-center gap-3 group">
+          <div class="p-2.5 border border-sky-200 rounded-xl text-sky-600 group-hover:bg-sky-100 transition">
+              <path d="M12 3c-4.97 0-9 1.57-9 3.5S7.03 10 12 10s9-1.57 9-3.5S16.97 3 12 3zm0 5C8.13 8 5 6.88 5 6.5S8.13 5 12 5s7 1.12 7 1.5S15.87 8 12 8zM3 9.5v3C3 14.43 7.03 16 12 16s9-1.57 9-3.5v-3c0 1.93-4.03 3.5-9 3.5S3 11.43 3 9.5zm0 6v3C3 20.43 7.03 22 12 22s9-1.57 9-3.5v-3c0 1.93-4.03 3.5-9 3.5S3 17.43 3 15.5z"/>
+              <img src="website-logo.png" alt="webiste logo" class="w-12 h-12" >
+            </svg>
+          </div>
+        </a>
 
-<section>
-  <div class="card">
-    <h2>About Me</h2>
-    <p>I am a professional MySQL Database Administrator with hands-on experience in performance tuning, replication, backup & recovery, and production troubleshooting. I help businesses optimize their databases for high performance and reliability.</p>
-  </div>
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-600">
+          <a href="#home" class="hover:text-sky-600 transition">Home</a>
+          <a href="#about" class="hover:text-sky-600 transition">About</a>
+          <a href="#services" class="hover:text-sky-600 transition">Services</a>
+          <a href="#projects" class="hover:text-sky-600 transition">Projects</a>
+          <a href="#testimonials" class="hover:text-sky-600 transition">Testimonials</a>
+        </nav>
 
-  <div class="card">
-    <h2>Skills</h2>
-    <div class="skills">
-      <span>MySQL 8</span>
-      <span>Performance Optimization</span>
-      <span>Query Tuning</span>
-      <span>Replication</span>
-      <span>Backup & Recovery</span>
-      <span>Linux</span>
-      <span>Docker</span>
-      <span>Monitoring (PMM)</span>
+        <!-- Primary CTA Button -->
+        <div class="hidden sm:block">
+          <a href="#contact" class="gold-pill-btn px-6 py-2.5 rounded-full text-sm inline-block">
+            Contact Me
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+      </div>
     </div>
-  </div>
 
-  <div class="card">
-    <h2>Projects</h2>
-    <ul>
-      <li>Optimized slow queries reducing execution time by 80%</li>
-      <li>Implemented MySQL replication for high availability</li>
-      <li>Setup monitoring using PMM and Grafana</li>
-    </ul>
-  </div>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 font-semibold text-slate-700">
+      <a href="#home" class="block py-2 hover:text-sky-600">Home</a>
+      <a href="#about" class="block py-2 hover:text-sky-600">About</a>
+      <a href="#services" class="block py-2 hover:text-sky-600">Services</a>
+      <a href="#projects" class="block py-2 hover:text-sky-600">Projects</a>
+      <a href="#testimonials" class="block py-2 hover:text-sky-600">Testimonials</a>
+      <a href="#contact" class="inline-block mt-2 w-full text-center gold-pill-btn py-2.5 rounded-full text-sm">Contact Me</a>
+    </div>
+  </header>
 
-  <div class="card">
-    <h2>Services</h2>
-    <ul>
-      <li>Database Performance Tuning</li>
-      <li>Replication Setup & Troubleshooting</li>
-      <li>Backup & Disaster Recovery</li>
-      <li>Database Migration</li>
-    </ul>
-  </div>
 
-  <div class="card">
-    <h2>Contact</h2>
-    <p>Email: asad-48@hotmail.com</p>
-    <p><a href="https://www.linkedin.com/in/asad-ali-611326a8/">LinkedIn</a></p>
-    <button onclick="hireMe()">Hire Me</button>
-  </div>
-</section>
+  <!-- HERO SECTION -->
+  <section id="home" class="py-16 md:py-24 bg-gradient-to-b from-slate-100 via-white to-slate-50 border-b border-slate-200 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Content Left (7 cols) -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-xs font-bold tracking-wide uppercase">
+            <span>🌐 Remote Database Engineer & DBA</span>
+          </div>
 
-<footer>
-  <p>© 2026 Asad Ali | MySQL DBA</p>
-</footer>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight">
+            Remote DATABASE CONSULTING <br>
+            <span class="text-amber-600">& DBA SERVICES</span>
+          </h1>
 
-<script>
-function hireMe() {
-  alert("Contact me via email to discuss your project!");
-}
-</script>
+          <p class="text-lg sm:text-xl text-slate-600 font-medium leading-relaxed max-w-2xl">
+            Ensuring Peak Performance, High Availability & Security for Your Business Data.
+          </p>
+
+          <!-- Core Feature Checkmarks -->
+          <ul class="space-y-3 font-semibold text-slate-700 text-base">
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-sm">✓</span>
+              Database Troubleshooting & RCA
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-sm">✓</span>
+              Performance Tuning & Query Optimization
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-sm">✓</span>
+              High Availability & Replication Setup
+            </li>
+          </ul>
+
+          <!-- Action Buttons -->
+          <div class="pt-4 flex flex-wrap items-center gap-4">
+            <a href="#contact" class="gold-pill-btn px-8 py-4 rounded-full text-base sm:text-lg font-bold">
+              Free Diagnostic Call / Hire Me
+            </a>
+          </div>
+
+          <!-- Trust Sub-Badges -->
+          <div class="pt-2 flex items-center gap-6 text-xs sm:text-sm font-semibold text-slate-500">
+            <span class="flex items-center gap-1.5">
+              <span class="text-emerald-600 font-bold">✓</span> 100% Guaranteed Solutions
+            </span>
+            <span class="flex items-center gap-1.5">
+              <span class="text-emerald-600 font-bold">✓</span> 24/7 Redundancy
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Hero Visual Right (5 cols) -->
+        <!-- 📍 IMAGE LOCATION 1: Hero Section Graphic Placeholder -->
+        <div class="lg:col-span-5 relative">
+          <div class="bg-white border border-slate-200 rounded-3xl p-4 shadow-xl card-hover-shadow">
+            <img src="main.jpg" alt="Remote Cluster Dashboard" class="w-full h-auto rounded-2xl object-cover">
+            <div class="mt-4 p-3 bg-sky-50 border border-sky-100 rounded-xl flex items-center justify-between text-xs font-mono text-sky-800">
+              <span class="font-bold">MySQL Node Sync Status</span>
+              <span class="text-emerald-600 font-bold">● Active 100%</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Trust Bar -->
+      <div class="mt-16 pt-8 border-t border-slate-200 text-center">
+        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Trusted by 50+ Global Clients</p>
+        <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-12 opacity-60 font-bold text-slate-500 text-sm">
+          <span>Enterprise SaaS</span>
+          <span>FinTech Platforms</span>
+          <span>E-Commerce Giants</span>
+          <span>Cloud Infrastructure</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ABOUT ME SECTION -->
+  <section id="about" class="py-20 bg-white text-slate-900 border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Heading Top-Middle -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-black text-amber-600 tracking-wide uppercase">
+          ABOUT ME
+        </h2>
+        <p class="mt-2 text-base sm:text-lg text-slate-600 font-medium">
+          Your Trusted Database Partner
+        </p>
+      </div>
+
+      <!-- Main About Layout: Left Image Card, Right Text Content -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-16">
+
+        <!-- LEFT COLUMN: Profile Visual Card -->
+        <div class="lg:col-span-5 flex flex-col items-center">
+          <div class="w-full max-w-sm bg-slate-50 border-2 border-sky-300 rounded-3xl p-6 shadow-md text-center card-hover-shadow">
+            
+            <!-- 📍 IMAGE LOCATION 2: Profile Picture Container -->
+            <!-- Apni image lagane k lia src="asad-profile.png" se replace karein -->
+            <div class="w-48 h-48 mx-auto rounded-2xl overflow-hidden border-4 border-white shadow-lg mb-6 bg-slate-200">
+              <img src="asad-profile.png" alt="Asad Ali - Remote Database Consultant" class="w-full h-full object-cover">
+            </div>
+
+            <h3 class="text-2xl font-black text-slate-900">Asad Ali</h3>
+            <p class="text-sm font-bold text-sky-600 mt-1">Lead Database Engineer & Consultant</p>
+
+            <!-- Verified Badges -->
+            <div class="flex justify-center gap-3 mt-4 pt-4 border-t border-slate-200 text-xs font-semibold text-slate-600">
+              <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-md">✓ Certified</span>
+              <span class="px-2.5 py-1 bg-sky-50 text-sky-700 border border-sky-200 rounded-md">✓ Top Rated</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Bio Details & Achievements Checklist -->
+        <div class="lg:col-span-7 space-y-6">
+          <h3 class="text-3xl sm:text-4xl font-black text-slate-900">
+            Hi, I'm Asad Ali.
+          </h3>
+
+          <p class="text-slate-600 text-base sm:text-lg leading-relaxed font-medium">
+            I'm a passionate Database Engineer & Administrator with 9+ years of hands-on experience in keeping mission-critical database systems fast, secure, and always available. I specialize in troubleshooting complex crashes, optimizing slow queries, and architecting high-availability replication setups.
+          </p>
+
+          <!-- Achievement List -->
+          <ul class="space-y-3 font-semibold text-slate-700 text-sm sm:text-base">
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-sm shrink-0">✓</span>
+              Optimized 700+ database environments
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-sm shrink-0">✓</span>
+              Saved companies thousands in server costs through smart tuning
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-sm shrink-0">✓</span>
+              Proven track record of zero-data-loss recovery and seamless migrations
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-sm shrink-0">✓</span>
+              Expert in both on-premise and cloud (AWS RDS, GCP, Azure) databases
+            </li>
+          </ul>
+
+          <div class="pt-2">
+            <a href="#contact" class="gold-pill-btn px-8 py-3.5 rounded-full inline-block text-base">
+              Let's work together
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- MIDDLE-BOTTOM: Why I Can Help You (Skills Pill Badges) -->
+      <div class="pt-10 border-t border-slate-200 text-center">
+        <h4 class="text-lg font-extrabold text-slate-800 uppercase tracking-wide mb-6">
+          Why I Can Help You
+        </h4>
+        <div class="flex flex-wrap justify-center gap-3 sm:gap-4">
+          <span class="px-5 py-2.5 bg-slate-100 border border-slate-300 rounded-xl text-slate-800 font-bold text-sm hover:border-sky-500 hover:text-sky-600 transition">MySQL</span>
+          <span class="px-5 py-2.5 bg-slate-100 border border-slate-300 rounded-xl text-slate-800 font-bold text-sm hover:border-sky-500 hover:text-sky-600 transition">PostgreSQL</span>
+                    <span class="px-5 py-2.5 bg-slate-100 border border-slate-300 rounded-xl text-slate-800 font-bold text-sm hover:border-sky-500 hover:text-sky-600 transition">MSSQL</span>
+          <span class="px-5 py-2.5 bg-slate-100 border border-slate-300 rounded-xl text-slate-800 font-bold text-sm hover:border-sky-500 hover:text-sky-600 transition">Linux / OS</span>
+          <span class="px-5 py-2.5 bg-slate-100 border border-slate-300 rounded-xl text-slate-800 font-bold text-sm hover:border-sky-500 hover:text-sky-600 transition">Zabbix</span>
+          <span class="px-5 py-2.5 bg-slate-100 border border-slate-300 rounded-xl text-slate-800 font-bold text-sm hover:border-sky-500 hover:text-sky-600 transition">Percona Monitoring and Management (PMM)</span>
+          <span class="px-5 py-2.5 bg-slate-100 border border-slate-300 rounded-xl text-slate-800 font-bold text-sm hover:border-sky-500 hover:text-sky-600 transition">AWS RDS</span>
+          <span class="px-5 py-2.5 bg-slate-100 border border-slate-300 rounded-xl text-slate-800 font-bold text-sm hover:border-sky-500 hover:text-sky-600 transition">Query Tuning</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SERVICES SECTION -->
+  <section id="services" class="py-20 bg-slate-50 text-slate-900 border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Heading -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-black text-amber-600 tracking-wide uppercase">
+          SERVICES
+        </h2>
+        <p class="mt-2 text-base sm:text-lg text-slate-600 font-medium">
+          Expert Solutions for Peak Performance
+        </p>
+      </div>
+
+      <!-- 2x2 Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Service Card 1 -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 card-hover-shadow flex items-start gap-5">
+          <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-amber-600 shrink-0">
+              <img src="performance-tuning-icon.png" alt="Performance Tuning Icon" class="w-8 h-8" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Performance Tuning & Query Optimization</h3>
+            <ul class="space-y-2 text-slate-600 text-sm font-medium">
+              <li class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> Slow query analysis</li>
+              <li class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> Indexing strategy</li>
+              <li class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> Memory/Buffer tuning</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 card-hover-shadow flex items-start gap-5">
+          <div class="p-3 bg-sky-50 rounded-xl border border-sky-200 text-sky-600 shrink-0">
+              <img src="replication-icon.png" alt="Replication Icon" class="w-8 h-8" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">High Availability & Replication Setup</h3>
+            <ul class="space-y-2 text-slate-600 text-sm font-medium">
+              <li class="flex items-center gap-2"><span class="text-sky-600 font-bold">✓</span> Master-Slave/Master-Master setup</li>
+              <li class="flex items-center gap-2"><span class="text-sky-600 font-bold">✓</span> Zero data-loss config</li>
+              <li class="flex items-center gap-2"><span class="text-sky-600 font-bold">✓</span> Automatic failover</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 card-hover-shadow flex items-start gap-5">
+          <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-amber-600 shrink-0">
+              <img src="troubleshooting-icon.png" alt="Troubleshooting Icon" class="w-8 h-8" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Database Troubleshooting & RCA</h3>
+            <ul class="space-y-2 text-slate-600 text-sm font-medium">
+              <li class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> Crash analysis</li>
+              <li class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> Error diagnostics</li>
+              <li class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> Deadlock resolution</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 card-hover-shadow flex items-start gap-5">
+          <div class="p-3 bg-sky-50 rounded-xl border border-sky-200 text-sky-600 shrink-0">
+              <img src="cloud-migration-icon.png" alt="Cloud Migration Icon" class="w-8 h-8" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 001-9.999 5.002 5.002 0 00-9.78 2.096A4.001 4.001 0 003 15z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Cloud Migration & Architecture</h3>
+            <ul class="space-y-2 text-slate-600 text-sm font-medium">
+              <li class="flex items-center gap-2"><span class="text-sky-600 font-bold">✓</span> On-prem to AWS/GCP migration</li>
+              <li class="flex items-center gap-2"><span class="text-sky-600 font-bold">✓</span> Database upgrade</li>
+              <li class="flex items-center gap-2"><span class="text-sky-600 font-bold">✓</span> Schema normalization</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="py-20 bg-white text-slate-900 border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-black text-amber-600 tracking-wide uppercase">
+          MY PROJECTS
+        </h2>
+        <p class="mt-2 text-base sm:text-lg text-slate-600 font-medium">
+          Featured Work & Successful Deliveries
+        </p>
+      </div>
+
+      <!-- Stacked Cards Container -->
+      <div class="space-y-8">
+
+        <!-- PROJECT CARD 1 -->
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 lg:p-8 card-hover-shadow grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          
+          <img src="performance-tuning.png" alt="Database Performance Dashboard" width="70%"  class="lg:col-span-4 rounded-xl border border-slate-200 shadow-sm object-cover">
+
+          <div class="lg:col-span-5 flex flex-col justify-between h-full space-y-4">
+            <div>
+              <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900">
+                Enterprise Database Performance Tuning
+              </h3>
+              <p class="text-amber-600 text-sm font-bold mb-2">Query & Server Optimization</p>
+              <ul class="space-y-1.5 text-slate-600 text-sm font-medium">
+                <li>• Resolved critical CPU spikes</li>
+                <li>• Fine-tuned slow query logs</li>
+                <li>• Optimized InnoDB memory configuration</li>
+              </ul>
+            </div>
+            <div>
+              <a href="#contact" class="inline-block px-5 py-2 rounded-full bg-amber-100 text-amber-800 border border-amber-300 font-bold text-xs hover:bg-amber-500 hover:text-white transition">
+                View Case Study
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-3 bg-white border border-amber-200 rounded-xl p-5 text-center flex flex-col justify-center h-full">
+            <div class="text-3xl lg:text-4xl font-black text-amber-600 tracking-tight">80%</div>
+            <div class="text-xs font-bold text-slate-700 uppercase tracking-wider my-1">Faster Query Executions</div>
+            <div class="text-xs text-amber-700 font-mono bg-amber-50 p-1.5 rounded border border-amber-200">
+              Latency: 250ms ➔ 45ms
+            </div>
+          </div>
+
+        </div>
+
+        <!-- PROJECT CARD 2 -->
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 lg:p-8 card-hover-shadow grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          
+          <img src="replication.png" alt="Database Replication Diagram" width="80%" height="100%" class="lg:col-span-4 rounded-xl border border-slate-200 shadow-sm object-cover">
+
+          <div class="lg:col-span-5 flex flex-col justify-between h-full space-y-4">
+            <div>
+              <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900">
+                High Availability & Replication Setup
+              </h3>
+              <p class="text-sky-600 text-sm font-bold mb-2">Database Redundancy & DR</p>
+              <ul class="space-y-1.5 text-slate-600 text-sm font-medium">
+                <li>• Configured Master-Slave & Master-Master replication</li>
+                <li>• Zero-downtime database synchronization</li>
+                <li>• Automated daily backups & failover scripting</li>
+              </ul>
+            </div>
+            <div>
+              <a href="#contact" class="inline-block px-5 py-2 rounded-full bg-sky-100 text-sky-800 border border-sky-300 font-bold text-xs hover:bg-sky-600 hover:text-white transition">
+                View Case Study
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-3 bg-white border border-sky-200 rounded-xl p-5 text-center flex flex-col justify-center h-full">
+            <div class="text-3xl lg:text-4xl font-black text-sky-600 tracking-tight">99.99%</div>
+            <div class="text-xs font-bold text-slate-700 uppercase tracking-wider my-1">Uptime Achieved</div>
+            <div class="text-xs text-sky-700 font-mono bg-sky-50 p-1.5 rounded border border-sky-200">
+              Zero Data-Loss Setup
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Bottom CTA Link -->
+      <div class="text-center mt-12">
+        <p class="text-slate-600 font-medium">
+          Want to discuss your project? 
+          <a href="#contact" class="text-amber-600 font-bold underline hover:text-amber-700 transition ml-1">
+            [Get a Free Consultation]
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- TESTIMONIALS SECTION -->
+  <section id="testimonials" class="py-20 bg-slate-50 text-slate-900 border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Heading -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-black text-amber-600 tracking-wide uppercase">
+          CLIENT TESTIMONIALS
+        </h2>
+        <p class="mt-2 text-base sm:text-lg text-slate-600 font-medium">
+          What Clients Say About My Database Solutions
+        </p>
+      </div>
+
+      <!-- Testimonials 3-Column Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- TESTIMONIAL 1 -->
+        <!-- 📍 IMAGE LOCATION 3: Client Avatar 1 -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col justify-between card-hover-shadow">
+          <div>
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 rounded-full border-2 border-sky-400 overflow-hidden bg-slate-200 shrink-0">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80" alt="Marcus T." class="w-full h-full object-cover">
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-slate-900">Marcus T.</h3>
+                <p class="text-xs font-medium text-sky-600">CTO at FinTech Solutions</p>
+              </div>
+            </div>
+
+            <div class="flex text-amber-500 text-sm mb-3">★ ★ ★ ★ ★</div>
+            <h4 class="text-sm font-bold text-slate-900 mb-2">Amazing MySQL Performance Rescue!</h4>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6 font-medium">
+              Our database was crashing daily due to bad queries and locking issues. Asad diagnosed the issue within hours and optimized our setup. Our application is now blazing fast!
+            </p>
+          </div>
+
+          <div>
+            <span class="block text-center py-2 px-3 rounded-lg bg-sky-50 border border-sky-200 text-sky-700 text-xs font-bold uppercase">
+              80% Faster Queries
+            </span>
+          </div>
+        </div>
+
+        <!-- TESTIMONIAL 2 -->
+        <!-- 📍 IMAGE LOCATION 4: Client Avatar 2 -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col justify-between card-hover-shadow">
+          <div>
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 rounded-full border-2 border-sky-400 overflow-hidden bg-slate-200 shrink-0">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80" alt="Sarah M." class="w-full h-full object-cover">
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-slate-900">Sarah M.</h3>
+                <p class="text-xs font-medium text-sky-600">Director of Engineering</p>
+              </div>
+            </div>
+
+            <div class="flex text-amber-500 text-sm mb-3">★ ★ ★ ★ ★</div>
+            <h4 class="text-sm font-bold text-slate-900 mb-2">Seamless HA & Replication Setup</h4>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6 font-medium">
+              Asad configured our multi-region master-slave MySQL replication and disaster recovery setup with zero downtime. His expertise in high availability is top-notch.
+            </p>
+          </div>
+
+          <div>
+            <span class="block text-center py-2 px-3 rounded-lg bg-sky-50 border border-sky-200 text-sky-700 text-xs font-bold uppercase">
+              99.99% Uptime Active
+            </span>
+          </div>
+        </div>
+
+        <!-- TESTIMONIAL 3 -->
+        <!-- 📍 IMAGE LOCATION 5: Client Avatar 3 -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col justify-between card-hover-shadow">
+          <div>
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 rounded-full border-2 border-sky-400 overflow-hidden bg-slate-200 shrink-0">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80" alt="David K." class="w-full h-full object-cover">
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-slate-900">David K.</h3>
+                <p class="text-xs font-medium text-sky-600">SaaS Founder</p>
+              </div>
+            </div>
+
+            <div class="flex text-amber-500 text-sm mb-3">★ ★ ★ ★ ★</div>
+            <h4 class="text-sm font-bold text-slate-900 mb-2">Quick Disaster Recovery & RCA</h4>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6 font-medium">
+              We hit a major production database crash, and Asad saved the day. He pinpointed the corruption, recovered data safely, and provided a detailed RCA report.
+            </p>
+          </div>
+
+          <div>
+            <span class="block text-center py-2 px-3 rounded-lg bg-sky-50 border border-sky-200 text-sky-700 text-xs font-bold uppercase">
+              Zero Data Loss & RCA
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Golden CTA Button -->
+      <div class="mt-16 text-center">
+        <a href="#contact" class="gold-pill-btn px-8 py-4 rounded-full text-base sm:text-lg inline-block">
+          Get a Free Diagnostic Call
+        </a>
+        <p class="text-slate-500 text-xs sm:text-sm mt-3 font-semibold">Let's resolve your database issues today!</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT & FOOTER SECTION -->
+  <section id="contact" class="py-20 bg-white text-slate-900 border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Heading -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-black text-amber-600 tracking-wide uppercase">
+          CONTACT ME
+        </h2>
+        <p class="mt-2 text-base sm:text-lg text-slate-600 font-medium">
+          Let's Solve Your Database Challenges Together
+        </p>
+      </div>
+
+      <!-- 2-Column Contact Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
+
+        <!-- Left Column: Contact Info -->
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 card-hover-shadow flex flex-col justify-between">
+          <div>
+            <h3 class="text-2xl font-black text-slate-900 mb-4">Get In Touch</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-8 font-medium">
+              Have a slow database, need replication setup, or need urgent troubleshooting? Drop a message or book a consultation call directly.
+            </p>
+
+            <div class="space-y-6">
+              <!-- Email Address -->
+              <div class="flex items-center gap-4">
+                <div class="p-3 bg-amber-100 border border-amber-300 rounded-xl text-amber-700 shrink-0">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-xs text-amber-700 font-bold uppercase">Email</p>
+                  <a href="mailto:asad-48@hotmail.com" class="text-slate-900 font-bold hover:text-sky-600 text-sm sm:text-base transition">
+                    asad-48@hotmail.com
+                  </a>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <!-- <div class="flex items-center gap-4">
+                <div class="p-3 bg-amber-100 border border-amber-300 rounded-xl text-amber-700 shrink-0">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-xs text-amber-700 font-bold uppercase">Location</p>
+                  <p class="text-slate-900 font-bold text-sm sm:text-base">Karachi, Pakistan (GMT+5)</p>
+                </div>
+              </div> -->
+
+              <!-- Upwork Link -->
+              <div class="flex items-center gap-4">
+                <div class="p-3 bg-amber-100 border border-amber-300 rounded-xl text-amber-700 shrink-0">
+                  <span class="font-extrabold text-sm">up</span>
+                </div>
+                <div>
+                  <p class="text-xs text-amber-700 font-bold uppercase">Upwork Profile</p>
+                  <a href="https://www.upwork.com/freelancers/~01276cb2d5e01280f7" target="_blank" class="text-slate-900 font-bold hover:text-sky-600 text-sm sm:text-base transition">
+                    Contact on Upwork
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Form -->
+          <!-- <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 card-hover-shadow">
+            <h3 class="text-2xl font-black text-slate-900 mb-6">Send a Message</h3>
+            
+            <form class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you! Message sent successfully.');">
+              <div>
+                <input type="text" placeholder="Your Name" required class="w-full bg-white border border-slate-300 focus:border-sky-500 rounded-xl px-4 py-3 text-slate-900 text-sm outline-none transition focus:ring-2 focus:ring-sky-200">
+              </div>
+              <div>
+                <input type="email" placeholder="Your Email" required class="w-full bg-white border border-slate-300 focus:border-sky-500 rounded-xl px-4 py-3 text-slate-900 text-sm outline-none transition focus:ring-2 focus:ring-sky-200">
+              </div>
+              <div>
+                <input type="text" placeholder="Subject" required class="w-full bg-white border border-slate-300 focus:border-sky-500 rounded-xl px-4 py-3 text-slate-900 text-sm outline-none transition focus:ring-2 focus:ring-sky-200">
+              </div>
+              <div>
+                <textarea rows="4" placeholder="How can I help you?" required class="w-full bg-white border border-slate-300 focus:border-sky-500 rounded-xl px-4 py-3 text-slate-900 text-sm outline-none transition focus:ring-2 focus:ring-sky-200 resize-none"></textarea>
+              </div>
+              <button type="submit" class="w-full py-3.5 gold-pill-btn rounded-xl text-base font-bold">
+                Send Message
+              </button>
+            </form>
+          </div> -->
+
+
+      </div>
+
+      <!-- FOOTER BOTTOM BAR -->
+      <footer class="pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          <p class="font-bold text-slate-800">Asad Ali | Remote Database Consultant & Administrator</p>
+        </div>
+        <div>
+          <p>© 2026 Asad Ali. All rights reserved.</p>
+        </div>
+        <div class="flex gap-4 text-sky-600 font-bold">
+          <a href="https://github.com/asadali48" target="_blank" class="hover:text-amber-600 transition">GitHub</a>
+          <span>|</span>
+          <a href="https://www.linkedin.com/in/asad-ali-611326a8" target="_blank" class="hover:text-amber-600 transition">LinkedIn</a>
+          <span>|</span>
+          <a href="https://www.upwork.com/freelancers/~01276cb2d5e01280f7" target="_blank" class="hover:text-amber-600 transition">Upwork</a>
+        </div>
+      </footer>
+
+    </div>
+  </section>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
